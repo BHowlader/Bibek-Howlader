@@ -647,6 +647,9 @@ span{
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Ensure the image doesn't overflow */
   }
+    .home-img img{
+        max-width: 70vw;
+    }
 }
 @media (max-width: 480px) {
     .home-content h3 {

@@ -27,7 +27,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 5% 4rem 2%;
+    padding: 4rem 9% 4rem 7%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;
@@ -460,7 +460,7 @@ span{
 }
 @media(max-width: 991px){
     header{
-        padding: 2rem 3% 2rem 1%;
+        padding: 2rem 5% 2rem 3%;
     }
     section{
         padding: 10rem 3% 2rem;

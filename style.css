@@ -27,7 +27,7 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 4rem 9% 4rem 7%;
+    padding: 4rem 6% 4rem 4%;
     background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     display: flex;

@@ -560,44 +560,64 @@ span{
         height: 3px;
         background: var(--main-color);
     }
+    section {
+        padding: 10rem 5% 2rem; /* Center content by using equal padding on both sides */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center all section content */
+    }
     .home {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .home-content h3 {
-        font-size: 2.5rem;
-        flex-direction: row; 
-        flex-wrap: wrap;
-    }
-    .home-content h1 {
-        font-size: 4.5rem;
-    }
-    .home-content p{
-        max-width: 500px;
-        margin: 0 auto;
+    .home-content {
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Ensure full width */
     }
     .home-img {
         display: flex;
-        justify-content: center; /* Center the image horizontally */
-        align-items: center; /* Center the image vertically */
-        width: 100%; /* Ensure the container takes full width */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
-    .home-img img{
+    .home-img img {
         max-width: 70vw;
         margin: 0 auto;
     }
-    .text-animation {
-        font-size: 2.5rem;
+    .timeline-items {
+        margin: 0 auto; /* Center the timeline */
+        width: 100%; /* Ensure it takes full width */
+    }
+    .timeline-items::before {
+        left: 50%; /* Re-center the timeline line */
+        transform: translateX(-50%);
+    }
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: center; /* Center text for odd items */
+    }
+    .timeline-item:nth-child(even) {
+        padding-left: 0;
+        text-align: center; /* Center text for even items */
+    }
+    .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
     }
     .contact form {
         gap: 3rem;
+        width: 100%; /* Ensure form takes full width */
+        align-items: center;
     }
     .contact .input-box {
         margin: 1.5rem 0;
+        width: 100%; /* Ensure input boxes are centered */
     }
     .contact textarea {
         margin: 1.5rem 0;
+        width: 100%;
     }
 }
 @media (max-width: 480px) {

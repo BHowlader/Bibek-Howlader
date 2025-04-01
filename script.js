@@ -1,25 +1,55 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar=document.querySelector('.navbar');
-let sections=document.querySelector('section');
-let navLinks=document.querySelector('header nav a');
+let menuIcon = document.querySelector("#menu-icon");
+let navbar = document.querySelector(".navbar");
+let sections = document.querySelectorAll("section");
+let navLinks = document.querySelectorAll(".navbar a");
 
-window.onscroll= () => {
+// Scroll-based highlighting
+window.addEventListener("scroll", () => {
+    let top = window.scrollY;
+    let found = false;
+
     sections.forEach(sec => {
-        let top=window.scrollY;
-        let offset=sec.offsetTop -150;
+        let offset = sec.offsetTop - 150;
         let height = sec.offsetHeight;
-        let id= sec.getAttribute;
+        let id = sec.getAttribute("id");
 
-        if(top>=offset && top < offset + height){
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ' ]').classList.add
-                ('active')
-            })
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => link.classList.remove("active"));
+
+            let activeLink = document.querySelector(`.navbar a[href="#${id}"]`);
+            if (activeLink) {
+                activeLink.classList.add("active");
+                found = true;
+            }
         }
-    })
+    });
+
+    if (!found) {
+        navLinks.forEach(link => link.classList.remove("active"));
+        document.querySelector('.navbar a[href="#home"]').classList.add("active");
+    }
+});
+
+// Toggle menu for mobile
+if (menuIcon) {
+    menuIcon.addEventListener("click", () => {
+        console.log("Menu icon clicked!");
+        if (navbar) {
+            navbar.classList.toggle("show");
+            console.log("Navbar classList:", navbar.classList);
+            menuIcon.classList.toggle("bx-menu");
+            menuIcon.classList.toggle("bx-x");
+        } else {
+            console.error("Navbar not found!");
+        }
+    });
+} else {
+    console.error("Menu icon not found! Check the ID #menu-icon.");
 }
 
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('show');
-})
+// Ensure the page scrolls to the top on load if there's no hash
+window.onload = function() {
+    if (!location.hash) {
+        window.scrollTo(0, 0);
+    }
+};

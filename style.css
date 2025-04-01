@@ -202,7 +202,7 @@ span{
     vertical-align: middle;
     animation: 
         typing 90s steps(30) infinite,
-        blink-caret 0.75s step-end infinite;
+        blink-caret 0.90s step-end infinite;
 }
 .text-animation span {
     position: relative;

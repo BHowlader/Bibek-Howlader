@@ -34,6 +34,7 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 5;
+    transition: none;
 }
 .logo{
     font-size: 3rem;
@@ -47,6 +48,9 @@ body{
 }
 .logo span{
     text-shadow: 0 0 25px var(--main-color);
+}
+.navbar {
+    transition: none; 
 }
 .navbar a{
     font-size: 1.8rem;
@@ -521,10 +525,11 @@ span{
         display: block;
     }
     .navbar{
-        position: absolute;
+        position: fixed;
         top: 100%;
-        right: 0;
+        right: -50%;
         width: 50%;
+        height:100vh;
         padding: 1rem 3%;
         background: rgba(0, 0, 0, 0.8);
         backdrop-filter: blur(20px);
@@ -532,8 +537,10 @@ span{
         border-left: 2px solid var(--main-color);
         border-bottom: 2px solid var(--main-color);
         display: none;
+        transition: right 0.3s ease-in-out;
     }
     .navbar.show {
+        right: 0;
         display: block;
     }
     .navbar a{

@@ -560,47 +560,27 @@ span{
         height: 3px;
         background: var(--main-color);
     }
-    section {
-        padding: 10rem 3% 2rem; /* Revert to original padding */
-    }
     .home {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
     }
-    .home-content {
-        align-items: center;
-        text-align: center;
+    .home-content h3 {
+        font-size: 2.5rem;
+        flex-direction: row; 
+        flex-wrap: wrap;
     }
-    .home-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+    .home-content h1 {
+        font-size: 4.5rem;
     }
-    .home-img img {
-        max-width: 70vw;
+    .home-content p{
+        max-width: 500px;
         margin: 0 auto;
     }
-    .timeline-items {
-        max-width: 1200px;
-        margin: auto;
+    .home-img img{
+        max-width: 70vw;
     }
-    .timeline-items::before {
-        left: 7px; /* Revert to original position */
-        transform: none; /* Remove centering transform */
-    }
-    .timeline-item:nth-child(odd) {
-        padding-right: calc(50% + 30px);
-        text-align: right; /* Revert to right-aligned text */
-    }
-    .timeline-item:nth-child(even) {
-        padding-left: calc(50% + 30px);
-        text-align: left; /* Revert to left-aligned text */
-    }
-    .timeline-dot {
-        left: 0; /* Revert to original position */
-        transform: none; /* Remove centering transform */
+    .text-animation {
+        font-size: 2.5rem;
     }
     .contact form {
         gap: 3rem;

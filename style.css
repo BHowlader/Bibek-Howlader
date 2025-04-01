@@ -673,4 +673,9 @@ span{
     .contact .btn {
         margin: 2.5rem auto 0;
     }
+    .home-img img{
+        max-width: 80vw;
+        display: block;
+        margin: 0 auto;
+    }
 }

@@ -217,7 +217,7 @@ span{
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 15s steps(40) infinite;
+    animation: typing 20s steps(40) infinite;
 }
 .text-animation span::after {
     content: "";

@@ -561,10 +561,7 @@ span{
         background: var(--main-color);
     }
     section {
-        padding: 10rem 5% 2rem; /* Center content by using equal padding on both sides */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center all section content */
+        padding: 10rem 3% 2rem; /* Revert to original padding */
     }
     .home {
         flex-direction: column;
@@ -574,7 +571,6 @@ span{
     .home-content {
         align-items: center;
         text-align: center;
-        width: 100%; /* Ensure full width */
     }
     .home-img {
         display: flex;
@@ -587,37 +583,33 @@ span{
         margin: 0 auto;
     }
     .timeline-items {
-        margin: 0 auto; /* Center the timeline */
-        width: 100%; /* Ensure it takes full width */
+        max-width: 1200px;
+        margin: auto;
     }
     .timeline-items::before {
-        left: 50%; /* Re-center the timeline line */
-        transform: translateX(-50%);
+        left: 7px; /* Revert to original position */
+        transform: none; /* Remove centering transform */
     }
     .timeline-item:nth-child(odd) {
-        padding-right: 0;
-        text-align: center; /* Center text for odd items */
+        padding-right: calc(50% + 30px);
+        text-align: right; /* Revert to right-aligned text */
     }
     .timeline-item:nth-child(even) {
-        padding-left: 0;
-        text-align: center; /* Center text for even items */
+        padding-left: calc(50% + 30px);
+        text-align: left; /* Revert to left-aligned text */
     }
     .timeline-dot {
-        left: 50%;
-        transform: translateX(-50%);
+        left: 0; /* Revert to original position */
+        transform: none; /* Remove centering transform */
     }
     .contact form {
         gap: 3rem;
-        width: 100%; /* Ensure form takes full width */
-        align-items: center;
     }
     .contact .input-box {
         margin: 1.5rem 0;
-        width: 100%; /* Ensure input boxes are centered */
     }
     .contact textarea {
         margin: 1.5rem 0;
-        width: 100%;
     }
 }
 @media (max-width: 480px) {

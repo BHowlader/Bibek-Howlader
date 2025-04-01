@@ -201,8 +201,8 @@ span{
     width: auto;
     vertical-align: middle;
     animation: 
-        typing 40s steps(30) 1s infinite,
-        blink-caret 0.75s step-end infinite;
+        typing 5s steps(30) 1s infinite,
+        blink-caret 0.6s step-end infinite;
 }
 .text-animation span {
     position: relative;
@@ -217,7 +217,7 @@ span{
     width: 0;
     overflow: hidden;
     white-space: nowrap;
-    animation: typing 12s steps(40) 1s infinite;
+    animation: typing 6s steps(40) 1s infinite;
 }
 .text-animation span::after {
     content: "";

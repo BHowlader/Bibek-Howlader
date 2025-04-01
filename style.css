@@ -649,6 +649,8 @@ span{
   }
     .home-img img{
         max-width: 70vw;
+        display: block;
+        margin: 0 auto;
     }
 }
 @media (max-width: 480px) {

@@ -673,6 +673,15 @@ span{
     .contact .btn {
         margin: 2.5rem auto 0;
     }
+    .home-content {
+        align-items: center;
+        text-align: center;
+    }
+    .home-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .home-img img{
         max-width: 80vw;
         display: block;

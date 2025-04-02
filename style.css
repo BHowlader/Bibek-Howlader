@@ -313,11 +313,106 @@
   }
   .education{
       padding: 100px 15px;
-      background: var(--second-bg-color);
+      background: var(--bg-color);
   }
   .education h2{
       margin-bottom: 5rem;
   }
+  .skills {
+    background: var(--bg-color);
+    padding: 100px 15px;
+    color: white;
+    text-align: center;
+}
+
+.skills h2 {
+    margin-bottom: 5rem;
+}
+
+.skills-tree {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tree-root {
+    background: var(--bg-color);
+    border: 3px solid var(--main-color);
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+    position: relative;
+    z-index: 2;
+}
+
+.tree-branches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+.branch {
+    position: relative;
+    flex: 1 1 200px; /* Flexible width with minimum size */
+    max-width: 250px;
+}
+
+/* Skill items */
+.skill-item {
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 0 10px var(--main-color);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Branch lines (connectors) */
+.branch::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 40px; /* Length of the vertical line */
+    background: var(--main-color);
+    top: -40px; /* Connects to the root */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px var(--main-color);
+}
+
+/* Horizontal line connecting to root */
+.tree-branches::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background: var(--main-color);
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px var(--main-color);
+}
+
   .timeline-items{
       max-width: 1200px;
       margin: auto;
@@ -448,7 +543,7 @@
       bottom: 0;
       width: 100%;
       padding: 40px 0;
-      background-color: var(--second-bg-color);
+      background-color: var(--bg-color);
   }
   .footer .social{
       text-align: center;
@@ -614,6 +709,20 @@
       .footer{
           padding: 2rem 3%;
       }
+      .skills {
+        padding: 10rem 3% 2rem;
+    }
+    .branch {
+        flex: 1 1 150px;
+        max-width: 200px;
+    }
+    .skill-item {
+        font-size: 1.4rem;
+        padding: 0.8rem 1.5rem;
+    }
+    .tree-branches::before {
+        width: 90%;
+    }
       .home {
           flex-direction: column-reverse;
           text-align: center;
@@ -734,6 +843,28 @@
           top:0;
           left:0;
       }
+    .skills h2 {
+        font-size: 6rem;
+    }
+    .tree-root {
+        font-size: 1.8rem;
+        padding: 1.2rem 2.5rem;
+    }
+    .branch {
+        flex: 1 1 120px;
+        max-width: 150px;
+    }
+    .skill-item {
+        font-size: 1.3rem;
+        padding: 0.7rem 1.2rem;
+    }
+    .tree-branches {
+        gap: 1.5rem;
+    }
+    .branch::before {
+        height: 30px;
+        top: -30px;
+    }
       .text-animation {
           font-size: 2.5rem;
       }
@@ -766,6 +897,27 @@
       .text-animation::before {
           animation: typing 6s steps(30) infinite;
       }
+      .skills h2 {
+        font-size: 5rem;
+    }
+    .tree-root {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+    }
+    .branch {
+        flex: 1 1 100px;
+        max-width: 120px;
+    }
+    .skill-item {
+        font-size: 1.2rem;
+        padding: 0.6rem 1rem;
+    }
+    .tree-branches {
+        gap: 1rem;
+    }
+    .tree-branches::before {
+        width: 95%;
+    }
       .contact form {
           gap: 2.5rem;
       }

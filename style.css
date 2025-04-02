@@ -60,6 +60,16 @@
   .logo span{
       text-shadow: 0 0 25px var(--main-color);
   }
+  .navbar .btn.newsletter-btn {
+    color: black;
+    margin-left: 4rem;
+    position: relative;
+    overflow: visible; /* Ensure button glow isn't clipped */
+}
+.navbar .btn.newsletter-btn:hover::after,
+.navbar .btn.newsletter-btn.active::after {
+    content: none !important;
+}
   .navbar {
       transition: none; 
   }
@@ -81,6 +91,16 @@
       height: 3px;
       background: var(--main-color);
   }
+  .navbar a:not(.btn):hover::after,
+.navbar a:not(.btn).active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 3px;
+    background: var(--main-color);
+}
   #menu-icon{
       font-size: 3.6rem;
       color: var(--main-color);
@@ -178,6 +198,7 @@
       background-color: var(--main-color);
   }
   .btn{
+    font-family: "Poppins", sans-serif;
       display: inline-block;
       padding: 1rem 2.8rem;
       background: var(--main-color);
@@ -192,6 +213,7 @@
       cursor: pointer;
   }
   .btn:hover{
+    color: black !important;
       transform: scale(1.05);
       box-shadow: 0 0 50px var(--main-color);
   }
@@ -530,6 +552,11 @@
           margin: 1rem 0;
           padding: 1.8rem;
       }
+      .navbar .btn.newsletter-btn {
+        font-family: inherit;
+        margin-left: 0;
+        order: 1; /* Position button first in mobile menu */
+    }
   }
   @media(max-width:768px){
       #menu-icon{
@@ -539,8 +566,8 @@
           position: fixed;
           top: 100%;
           right: -50%;
-          width: 50%;
-          height:100vh;
+          width: 40%;
+          height: auto;
           padding: 1rem 3%;
           background: rgba(0, 0, 0, 0.8);
           backdrop-filter: blur(20px);
@@ -548,7 +575,8 @@
           border-left: 2px solid var(--main-color);
           border-bottom: 2px solid var(--main-color);
           display: none;
-          transition: right 0.3s ease-in-out;
+          transition: right 0.5s ease-in-out, backdrop-filter 0.3s ease-in-out;
+          border-radius: 2rem;
       }
       .navbar.show {
           right: 0;
@@ -566,11 +594,17 @@
           content: '';
           position: absolute;
           left: 0;
-          bottom: -3px;
-          width: 100%;
-          height: 3px;
+          bottom: -1px;
+          width: 50%;
+          height: 2px;
           background: var(--main-color);
       }
+      .navbar .btn {
+        width: 100%;
+        text-align: center;
+        margin: 1.5rem 0;
+        padding: 1.5rem 2rem;
+    }
       .home {
           flex-direction: column;
           align-items: center;

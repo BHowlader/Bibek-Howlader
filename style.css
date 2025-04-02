@@ -659,7 +659,7 @@
           position: fixed;
           top: 100%;
           right: -50%;
-          width: 40%;
+          width: 45%;
           height: auto;
           padding: 1rem 3%;
           background: rgba(0, 0, 0, 0.8);
@@ -672,8 +672,13 @@
           border-radius: 2rem;
       }
       .navbar.show {
-          right: 0;
-          display: block;
+        right: 0;
+        display: flex; /* Change to flex for centering */
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+        height: auto; /* Allow height to adjust to content */
+        padding: 2rem 3%; /* Adjust padding for better spacing */
       }
       .navbar a{
           display: block;
@@ -720,10 +725,14 @@
           justify-content: center; /* Center the image horizontally */
           align-items: center; /* Center the image vertically */
           width: 100%; /* Ensure the container takes full width */
+          margin: 0;
       }
       .home-img img{
           max-width: 70vw;
           margin: 0 auto;
+          position: relative;
+          top:0;
+          left:0;
       }
       .text-animation {
           font-size: 2.5rem;

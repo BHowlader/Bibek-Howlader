@@ -71,6 +71,36 @@
      height: 3px;
      background: var(--main-color);
  }
+.navbar .newsletter-btn {
+    margin-left: 2rem;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    color: #000;
+    border-radius: 4rem;
+    font-weight: 600;
+}
+ .newsletter-btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    color: #000;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px var(--main-color);
+    margin-left: 4rem;
+    border: 2px solid transparent;
+}
+
+.newsletter-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px var(--main-color);
+    background: #000;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
  #menu-icon{
      font-size: 3.6rem;
      color: var(--main-color);

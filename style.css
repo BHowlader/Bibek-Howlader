@@ -1049,6 +1049,7 @@ span {
     .contact form .btn {
         padding: 1.2rem 3.5rem;
         font-size: 1.6rem;
+        margin-bottom: 3.5rem;
     }
     .modal-content {
         padding: 4rem;

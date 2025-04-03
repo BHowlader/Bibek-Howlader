@@ -8,6 +8,10 @@ const newsletterBtn = document.querySelector('.newsletter-btn');
 const newsletterModal = document.getElementById('newsletterModal');
 const closeModal = document.querySelector('.close-modal');
 
+// Contact Form Elements
+const contactForm = document.getElementById('contactForm');
+const successMessage = document.querySelector('.contact .success-message');
+
 // Scroll-based Section Highlighting
 window.addEventListener("scroll", () => {
     let top = window.scrollY;
@@ -67,21 +71,19 @@ window.addEventListener('message', (event) => {
     if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
         if (event.data.id === '0b3db9d4-10f7-4918-8c20-ef1e74098d5e') {
             alert('🚀 Subscription successful! Welcome to my research network.');
-            // Attempt to style the thank-you message inside the iframe
             const iframe = document.querySelector('.modal-form iframe');
             if (iframe) {
                 const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
                 const message = iframeDoc.querySelector('.submitted-message');
                 if (message) {
-                    message.style.background = '#131313'; // Match --second-bg-color
-                    message.style.color = 'white'; // Match --text-color
-                    message.style.border = '3px solid #00ffee'; // Match --main-color
+                    message.style.background = '#131313';
+                    message.style.color = 'white';
+                    message.style.border = '3px solid #00ffee';
                     message.style.borderRadius = '20px';
                     message.style.padding = '20px';
                     message.style.textAlign = 'center';
                     message.style.fontFamily = '"Poppins", sans-serif';
                     message.style.boxShadow = '0 0 25px #00ffee';
-                    // Style any links inside the message
                     const links = message.querySelectorAll('a');
                     links.forEach(link => {
                         link.style.color = '#00ffee';
@@ -96,14 +98,45 @@ window.addEventListener('message', (event) => {
                     });
                 }
             }
-            // Close the modal after a delay to let the user see the message
             setTimeout(() => {
                 newsletterModal.style.display = 'none';
                 document.body.style.overflow = 'auto';
-            }, 2000); // 2-second delay
+            }, 2000);
         }
     }
 });
+
+// Handle Contact Form Submission
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent the default mailto action for now
+
+        // Simulate form submission (since there's no backend)
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        // Format the email body
+        const subject = encodeURIComponent(`New Contact Form Submission from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+        const mailtoLink = `mailto:howladerbibek33@gmail.com?subject=${subject}&body=${body}`;
+
+        // Open the user's email client
+        window.location.href = mailtoLink;
+
+        // Show the success message
+        successMessage.style.display = 'block';
+        contactForm.style.display = 'none'; // Hide the form
+
+        // Reset the form after a delay (optional, since mailto doesn't need it)
+        setTimeout(() => {
+            contactForm.reset();
+            successMessage.style.display = 'none';
+            contactForm.style.display = 'flex';
+        }, 5000); // 5-second delay before resetting
+    });
+}
 
 // Initial Page Load Scroll
 window.onload = function() {

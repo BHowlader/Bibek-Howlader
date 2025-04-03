@@ -2,52 +2,54 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RVKB4MB59"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-9RVKB4MB59');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RVKB4MB59"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9RVKB4MB59');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bibek Howlader</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Newsletter Modal -->
-<div class="newsletter-modal" id="newsletterModal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2>Join My Research Network</h2>
-        <form id="newsletterForm" class="modal-form">
-            <div class="input-group">
-                <input type="email" name="email" required 
-                    placeholder="Enter your professional email"
-                    autocomplete="off"
-                    class="neon-input">
-                <button type="submit" class="btn">Subscribe</button>
+    <!-- Newsletter Modal with HubSpot Form -->
+    <div class="newsletter-modal" id="newsletterModal">
+        <div class="modal-content">
+            <span class="close-modal">×</span>
+            <h2>Join My Research Network</h2>
+            <div class="modal-form">
+                <!-- HubSpot Form Embed -->
+                <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+                        <script>
+                            hbspt.forms.create({
+                                portalId: "242440893",
+                                formId: "10299364-aef4-4eff-9964-68ce34994566",
+                                region: "na2"
+                            });
+                        </script>
             </div>
-        </form>
+        </div>
     </div>
-</div>
+
     <header class="header">
         <a href="#home" class="logo">Bibek 
             <span>Howlader</span></a>
-
-            <i class='bx bx-menu' id="menu-icon"></i>
-
-            <nav class="navbar"> 
-                <a href="#home" class="active">Home</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#newsletter" class="btn newsletter-btn">Newsletter</a>
-            </nav>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar"> 
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#newsletter" class="btn newsletter-btn">Newsletter</a>
+        </nav>
     </header>
+
     <section class="home" id="home">
         <div class="home-content">
             <h1>Hi, It's <span>Bibek</span></h1>
@@ -66,31 +68,30 @@ gtag('config', 'G-9RVKB4MB59');
                 <a href="resume.pdf" download class="btn">Download Resume</a>
             </div>
         </div>
-            <div class="home-img">
-                <img src="image.JPG" alt="">
-            </div>
+        <div class="home-img">
+            <img src="image.JPG" alt="">
+        </div>
     </section>
+
     <section class="education" id="education">
         <h2 class="heading">Education</h2>
-
         <div class="timeline-items">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                    <div class="timeline-date">2020 - 2022</div>
+                <div class="timeline-date">2020 - 2022</div>
                 <div class="timeline-content">
                     <h3>Dhaka Residential Model College</h3>
                     <p>I've completed my Higher Secondary Certificate(H.S.C) in Science with GPA-5.00.</p>
                 </div>
             </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                        <div class="timeline-date">Present</div>
-                    <div class="timeline-content">
-                        <h3>American International University-Bangladesh</h3>
-                        <p>I am currently doing my Bachelor in Computer Science and Engineering. But very soon, I'll transfer my credits to a USA university for better learning at my field.</p>
-                    </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Present</div>
+                <div class="timeline-content">
+                    <h3>American International University-Bangladesh</h3>
+                    <p>I am currently doing my Bachelor in Computer Science and Engineering. But very soon, I'll transfer my credits to a USA university for better learning at my field.</p>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -135,29 +136,28 @@ gtag('config', 'G-9RVKB4MB59');
 
     <section class="my-projects" id="projects">
         <h2 class="heading">Projects</h2>
-
         <div class="timeline-items">
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
-                    <div class="timeline-date">HMPV Drug Prediction</div>
-                    <a href="https://github.com/BHowlader/hMPV-and-Human-host-PPI-Prediction/blob/main/Final_PPI.ipynb" target="_blank" class="timeline-link">
-                <div class="timeline-content">
-                    <p>This project focuses on predicting interactions between human and human metapneumovirus (HMPV) proteins using machine learning (ML) techniques, aiding in the discovery of potential drug targets. Understanding these interactions is crucial for identifying key viral-host protein relationships that could be targeted for therapeutic intervention.</p>
-                </div>
-            </a>
+                <div class="timeline-date">HMPV Drug Prediction</div>
+                <a href="https://github.com/BHowlader/hMPV-and-Human-host-PPI-Prediction/blob/main/Final_PPI.ipynb" target="_blank" class="timeline-link">
+                    <div class="timeline-content">
+                        <p>This project focuses on predicting interactions between human and human metapneumovirus (HMPV) proteins using machine learning (ML) techniques, aiding in the discovery of potential drug targets. Understanding these interactions is crucial for identifying key viral-host protein relationships that could be targeted for therapeutic intervention.</p>
+                    </div>
+                </a>
             </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                        <div class="timeline-date">BCI EEG Data Analysis</div>
-                        <a href="https://github.com/BHowlader/Brain-Computer-Interface-for-Autism/blob/main/BCI.ipynb" target="_blank" class="timeline-link">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">BCI EEG Data Analysis</div>
+                <a href="https://github.com/BHowlader/Brain-Computer-Interface-for-Autism/blob/main/BCI.ipynb" target="_blank" class="timeline-link">
                     <div class="timeline-content">
                         <p>In this innovative project, We designed and developed an advanced Brain-Computer Interface (BCI) system powered by artificial intelligence to analyze Electroencephalography (EEG) signals and accurately classify various cognitive states. By harnessing cutting-edge deep learning techniques, this system decodes complex brain activity with an impressive accuracy of <strong>98.81%</strong>. This breakthrough has far-reaching potential, opening doors to advancements in neurological research, assistive technology, and cognitive enhancement. My work demonstrates a seamless integration of AI and neuroscience, paving the way for transformative applications in understanding and enhancing human cognition.</p>
                     </div>
                 </a>
-                </div>
+            </div>
         </div>
     </section>
+
     <section class="contact" id="contact">
         <h2 class="heading">Ready to Work as a Team?</h2>
         <p>Let’s collaborate on innovative AI-driven healthcare projects! Reach out to discuss opportunities.</p>
@@ -176,6 +176,7 @@ gtag('config', 'G-9RVKB4MB59');
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
+
     <footer class="footer">
         <div class="social">
             <a href="https://www.instagram.com/universally.bibek/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
@@ -184,25 +185,17 @@ gtag('config', 'G-9RVKB4MB59');
             <a href="mailto:howladerbibek33@gmail.com"><i class='bx bx-envelope'></i></a>
         </div>
         <ul class="list">
-            <li>
-                <a href="#home">Home</a>
-            </li>
-
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
         <p class="copyright">
-            © Bibek Howlader | All Rights Reserved <br> <br>
-            Developed by <a href="https://www.linkedin.com/in/bibek-howlader-273944221/" target="_blank">Bibek Howlader</a> <br>
+            © Bibek Howlader | All Rights Reserved <br><br>
+            Developed by <a href="https://www.linkedin.com/in/bibek-howlader-273944221/" target="_blank">Bibek Howlader</a>
         </p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

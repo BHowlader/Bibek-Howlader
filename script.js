@@ -56,36 +56,20 @@ closeModal.addEventListener('click', () => {
 });
 
 window.addEventListener('click', (e) => {
-    if(e.target === newsletterModal) {
+    if (e.target === newsletterModal) {
         newsletterModal.style.display = 'none';
         document.body.style.overflow = 'auto';
     }
 });
 
-// Newsletter Form Submission
-document.getElementById('newsletterForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    
-    try {
-        // Replace with your actual endpoint URL
-        const response = await fetch('YOUR_FORM_ENDPOINT_HERE', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if(response.ok) {
+// Handle HubSpot Form Submission Feedback
+window.addEventListener('message', (event) => {
+    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
+        if (event.data.id === '0b3db9d4-10f7-4918-8c20-ef1e74098d5e') {
             alert('🚀 Subscription successful! Welcome to my research network.');
             newsletterModal.style.display = 'none';
             document.body.style.overflow = 'auto';
-        } else {
-            throw new Error('Server error');
         }
-    } catch (error) {
-        alert('⚠️ Subscription failed. Please try again or contact me directly.');
     }
 });
 

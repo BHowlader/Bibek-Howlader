@@ -344,6 +344,7 @@ span {
     font-size: 8rem;
     text-align: center;
     margin: 5rem 0;
+    padding-top: 2rem;
 }
 
 .education {
@@ -360,6 +361,9 @@ span {
     padding: 100px 15px;
     color: white;
     text-align: center;
+    min-height: 100vh; /* Adjusted */
+    margin-bottom: 5rem; /* Added */
+    scroll-margin-top: 8rem; /* Added for consistency */
 }
 
 .skills h2 {
@@ -402,13 +406,6 @@ span {
     position: relative;
     flex: 1 1 200px;
     max-width: 250px;
-}
-
-.skills {
-    height: auto;
-    min-height: 0;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
 }
 
 .skill-item {
@@ -560,6 +557,7 @@ span {
     background: var(--bg-color);
     color: white;
     padding: 5rem 0;
+    scroll-margin-top: 6rem;
 }
 
 .contact {
@@ -844,6 +842,9 @@ span {
     }
     .services {
         padding-bottom: 7rem;
+    }
+    .my-projects {
+        scroll-margin-top: 4rem; /* Adjust for smaller header padding */
     }
     .contact {
         padding: 10rem 3% 2rem;
